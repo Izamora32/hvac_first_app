@@ -36,7 +36,43 @@
 
   <!-- MAIN CONTENT -->
   <main class="main-content">
-    <div class="home-grid">
+
+    <!-- IMAGEN + ESTADO + COMPRESORES + VENTILADORES + ALARMA (ARRIBA) -->
+    <div class="image-with-status" style="margin-top: 1rem;">
+      <div class="system-status-inline off" id="systemStatus">
+        <div class="led"></div>
+        <div id="statusText">Sistema Apagado</div>
+      </div>
+      <div class="diagram-container">
+        <img src="./unit_diagram.png" alt="Diagrama de la Unidad" class="unit-image">
+        
+        <!-- COMPRESORES -->
+        <div class="comp-square off" id="comp1">
+          <span class="comp-label">C1</span>
+        </div>
+        <div class="comp-square off" id="comp2">
+          <span class="comp-label">C2</span>
+        </div>
+
+        <!-- VENTILADORES (2) -->
+        <div class="fan-spin off" id="fan1">
+          <div class="blades"></div>
+        </div>
+        <div class="fan-spin off" id="fan2">
+          <div class="blades"></div>
+        </div>
+
+        <!-- ALARMA ANIMADA -->
+        <div class="alarm-indicator off" id="alarmIndicator">
+          <div class="alarm-icon">!</div>
+          <div class="alarm-label">ALM</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WIDGETS (AHORA ABAJO) -->
+    <div class="home-grid" style="margin-top: 2.5rem;">
 
       <!-- TEMPERATURAS -->
       <div class="widget analog">
@@ -100,40 +136,6 @@
         <div class="setpoint-value" id="spTempValue">--<span class="unit">°C</span></div>
       </div>
 
-    </div>
-
-    <!-- IMAGEN + ESTADO + COMPRESORES + VENTILADORES + ALARMA -->
-    <div class="image-with-status">
-      <div class="system-status-inline off" id="systemStatus">
-        <div class="led"></div>
-        <div id="statusText">Sistema Apagado</div>
-      </div>
-      <div class="diagram-container">
-        <img src="./unit_diagram.png" alt="Diagrama de la Unidad" class="unit-image">
-        
-        <!-- COMPRESORES -->
-        <div class="comp-square off" id="comp1">
-          <span class="comp-label">C1</span>
-        </div>
-        <div class="comp-square off" id="comp2">
-          <span class="comp-label">C2</span>
-        </div>
-
-        <!-- VENTILADORES (2) -->
-        <div class="fan-spin off" id="fan1">
-          <div class="blades"></div>
-        </div>
-        <div class="fan-spin off" id="fan2">
-          <div class="blades"></div>
-        </div>
-
-        <!-- ALARMA ANIMADA -->
-        <div class="alarm-indicator off" id="alarmIndicator">
-          <div class="alarm-icon">!</div>
-          <div class="alarm-label">ALM</div>
-        </div>
-
-      </div>
     </div>
 
   </main>
